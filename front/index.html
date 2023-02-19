@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title> Interface gestion de jeux</title>
+</head>
+<body>
+    <main>
+        <nav id="tab_nav" class="tab">
+            <button class="tab_links" onclick="open_module(event, 'module1')">Jeux de plateau</button>
+            <button class="tab_links" onclick="open_module(event, 'module2')">Jeux vidéo</button>
+        </nav>
+<!--  PREMIER MODULE CONTENANT LES JEUX DE PLATEAU/ CHAQUE INPUT CHAQUE BUTTON A UN ID SPECIFIQUE  -->
+        <section id="module1" class="tab_content">
+            <div>
+                <h2>Les Jeux de plateau</h2>
+                <div>
+                    <h3>Afficher tous les jeux de plateaux</h3> <!-- METHODE GET ALL -->
+                        <button id="show-gameboard" class="gameboard">Voir tous les jeux de plateau</button>
+                </div>
+                <div> 
+                    <h3>Ajouter un jeu de plateau</h3> <!-- METHODE POST -->
+                        <label for="name">Nom du jeu</label> <br>
+                        <input type="text" id="name-gameboard"/> <br>
+                        <button id="add-gameboard" class="gameboard">Ajouter le jeu</button>
+                </div>
+                <div>
+                    <h3>Rechercher un jeu de plateau</h3> <!-- METHODE GET -->
+                        <label for="id">Numéro du jeu</label> <br>
+                        <input type="number" id="id-gameboard"/> <br>
+                        <button id="find-gameboard" class="gameboard">Récupérer le jeu</button>
+                </div>
+                <div>
+                    <h3>Modifier un jeu de plateau</h3> <!-- METHODE PUT -->
+                        <label for="id">Numéro du jeu de plateau</label> <br>
+                        <input type="number" id="new-id-gameboard"/> <br>
+                        <label for="name">Nouveau nom de le jeu de plateau</label> <br>
+                        <input type="name" id="new-name-gameboard"/> <br>
+                        <button id="modify-gameboard" class="gameboard">Modifier le jeu</button>
+                </div>
+                <div>
+                    <h3>Supprimer un jeu de plateau</h3> <!-- METHODE DELETE -->
+                        <label for="id">Numéro de le jeu de plateau</label> <br>
+                        <input type="number" id="index-gameboard"/> <br>
+                        <button id="delete-gameboard" class="gameboard">Supprimer le jeu de plateau</button>
+                </div>
+            </div>
+            <!-- DIV CIBLE POUR LES METHODES APPENDCHILD ET INNER HTML -->
+            <div id="target-gameboard"></div>
+        </section>
+<!--  SECOND MODULE CONTENANT LES JEUX VIDEO / CHAQUE INPUT CHAQUE BUTTON A UN ID SPECIFIQUE -->
+        <section id="module2" class="tab_content">
+            <div>
+                <h2>Les jeux vidéos</h2>
+                <div>
+                    <h3>Afficher tous les jeux vidéos</h3> <!-- METHODE GET ALL -->
+                        <button id="show-videogame">Voir tous les jeux vidéos</button>
+                </div>
+                <div>
+                    <h3>Ajouter un jeu vidéo</h3> <!-- METHODE POST -->
+                        <label for="name">Nom du jeu vidéo</label> <br>
+                        <input type="text" id="name-videogame"/> <br>
+                        <button id="add-videogame">Ajouter le jeu vidéo</button>
+                </div>
+                <div>
+                    <h3>Rechercher un jeu vidéo</h3> <!-- METHODE GET -->
+                        <label for="id">Numéro du jeu vidéo</label> <br>
+                        <input type="number" id="id-videogame"/> <br>
+                        <button id="find-videogame">Récupérer le jeu vidéo</button>
+                </div>
+                <div>
+                    <h3>Modifier un jeu vidéo</h3> <!-- METHODE PUT -->
+                        <label for="id">Numéro du jeu vidéo</label> <br>
+                        <input type="number" id="new-id-videogame"/> <br>
+                        <label for="name">Nouveau nom du jeu vidéo</label> <br>
+                        <input type="name" id="new-name-videogame"/> <br>
+                        <button id="modify-videogame">Modifier le jeu vidéo</button>
+                </div>
+                <div>
+                    <h3>Supprimer un jeu vidéo</h3> <!-- METHODE DELETE -->
+                        <label for="id">Numéro du jeu vidéo</label> <br>
+                        <input type="number" id="index-videogame"/> <br>
+                        <button id="delete-videogame">Supprimer le jeu vidéo</button>
+                </div>
+            </div>
+            <!-- DIV CIBLE POUR LES METHODES APPENDCHILD ET INNER HTML -->
+            <div id="target-videogame"></div>
+        </section>
+    </main>
+<!--  APPEL DES FICHIERS JAVASCRIPTS-->
+    <script src="presentation.js"></script> 
+    <script src="gameboard.js"></script> 
+    <script src="videogame.js"></script>
+</body>
+</html>

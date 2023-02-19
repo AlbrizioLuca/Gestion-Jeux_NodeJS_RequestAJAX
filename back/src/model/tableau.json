@@ -1,0 +1,38 @@
+{
+    "gameboard": [
+        {
+            "id": 1,
+            "name": "Blood Rage"
+        },
+        {
+            "id": 2,
+            "name": "Seven Wonders"
+        },
+        {
+            "id": 3,
+            "name": "Vilainous Disney"
+        },
+        {
+            "id": 4,
+            "name": "Times of Empires"
+        }
+    ],
+    "videogame": [
+        {
+            "id": 1,
+            "name": "The Elder Scrolls V: Skyrim"
+        },
+        {
+            "id": 2,
+            "name": "Naruto Shippuden Ultimate Ninja Storm 4"
+        },
+        {
+            "id": 3,
+            "name": "Stars Wars: Jedi Fallen Order"
+        },
+        {
+            "id": 4,
+            "name": "Zelda Breath of Wild"
+        }
+    ]
+}
